@@ -1,10 +1,10 @@
 fun getLanguage(): Int? {
     var language: Int? = null 
     while (language !in listOf(1,2)) {
-        println("Please enter language:\nEnglish: 1\nGerman: 2")
+        println("Please enter language:\nEnglish: 1 (default)\nGerman: 2")
         val input = readLine()
         if (input.isNullOrEmpty()) {
-            return 0
+            return 1
         }
         try {
             val number = input?.toInt()
