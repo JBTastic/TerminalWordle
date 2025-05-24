@@ -1,5 +1,7 @@
 # Wordle in the terminal!
 
+WARNING! This game may not work in Windows right now because of file paths using "\\" in Windows instead of "/". You could either just change the paths in the code and then compile yourself or wait until I release a fix for Windows users.  
+  
 This is Wordle, but in the terminal, written in Kotlin!  
   
 This project only contains Kotlin source files that are compiled into an executable `.jar` file.
