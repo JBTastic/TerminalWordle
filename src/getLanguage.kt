@@ -11,9 +11,11 @@ fun getLanguage(): Int? {
             if (number in listOf(1,2)) {
                 return number
             } else {
+                clearScreen()
                 println("Invalid language! Please enter 1 or 2.")
             }
         } catch (e: Exception) {
+            clearScreen()
             println("Invalid language! Please enter 1 or 2.")
         }
     }
