@@ -6,14 +6,14 @@ Usage: $0 [OPTION]
 
 Options:
   -h, --help        Show this help message and exit.
-  -e, --execute     Compile and then execute the main.jar file.
+  -e, --execute     Compile and then execute the wordle.jar file.
 
 Description:
   This script compiles all Kotlin source files in the src/ directory into a runnable
-  jar named main.jar.
+  jar named wordle.jar.
   If -e or --execute is provided, the compiled jar will be executed.
   If no option is given, the script will only compile the sources.
-  To execute the .jar file yourself, write "java -jar main.jar"
+  To execute the .jar file yourself, write "java -jar wordle.jar"
 EOF
 }
 
@@ -22,12 +22,12 @@ if [[ "$1" == "-h" || "$1" == "--help" ]]; then
   exit 0
 fi
 
-if [ -f main.jar ]; then
-  rm main.jar
+if [ -f wordle.jar ]; then
+  rm wordle.jar
 fi
 
-kotlinc ./src/*.kt -include-runtime -d main.jar
+kotlinc ./src/*.kt -include-runtime -d wordle.jar
 
 if [[ "$1" == "-e" || "$1" == "--execute" ]]; then
-  java -jar main.jar
+  java -jar wordle.jar
 fi

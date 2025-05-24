@@ -80,7 +80,13 @@ Compile the Kotlin source files into a `.jar`:
 ./compile.sh
 ```
 
-Compile and run the project:
+Run the game:
+
+```bash
+java -jar wordle.jar
+```
+
+Compile and run the game:
 
 ```bash
 ./compile.sh -e
@@ -92,7 +98,7 @@ Show help:
 ./compile.sh --help
 ```
 
-If no flag is provided, the script will just compile the project.
+If no flag is provided, the script will just compile the game.
 
 ## Legal
 This project uses a word list licensed under the MIT License, originally publishe [here](https://github.com/wordnik/wordlist).
