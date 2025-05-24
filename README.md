@@ -1,1 +1,1 @@
-# German Wordle in the terminal!
+# Wordle in the terminal!
