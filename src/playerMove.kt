@@ -4,7 +4,7 @@ fun playerMove(): Boolean {
 
     val input = readLine()
 
-    if (input.isNullOrEmpty()) {
+    if (input.isNullOrEmpty() || input.length != 5) {
         println("Enter a 5 letter word!")
         return false
     } else if (input !in wordList) {
