@@ -1,11 +1,3 @@
-// Set the board
-val rows = 6
-val cols = 5
-var board: Array<CharArray> = Array(rows) { CharArray(cols) { ' ' } }
-var wantedWord: String = "hello"
-var inputWord: String = ""
-var wordList: Array<String> = arrayOf("hello", "test1")
-
 // Set colors and text formatting
 val red = "\u001B[31m"
 val green = "\u001B[32m"
@@ -20,6 +12,16 @@ val fat = "\u001B[1m"
 val reset = "\u001B[0m" // resets the current color and formatting
 val clear = "\u001B[H\u001B[2J" // needed to clear the screen
 
+// Set the board
+val rows = 6
+val cols = 5
+var board: Array<CharArray> = Array(rows) { CharArray(cols) { ' ' } }
+var inputWord: String = ""
+var boardIndex: Int = 0
+var wantedWord: String = "hello"
+var wordList: Array<String> = arrayOf("hello", "test1", "rrrrr")
+
+
 fun clearScreen() {
     print(clear)
     System.out.flush()
@@ -27,6 +29,10 @@ fun clearScreen() {
 
 fun isSolved(): Boolean {
     return (inputWord == wantedWord)
+}
+
+fun wordsLeft(): Boolean {
+    return !(boardIndex >= rows)
 }
 
 fun main() {
@@ -42,12 +48,26 @@ fun main() {
     printBoard()
 
     // as long as the board is not solved, let the player make a move and then print the board
-    while (!isSolved()) {
+    while (!isSolved() && wordsLeft()) {
+        // if word was valid
         if (playerMove()) {
-            board[0] = inputWord.toCharArray()
+
+            // place word in the board
+            board[boardIndex] = inputWord.toCharArray()
+
+            // increase the board index
+            boardIndex++
+
+            // clear screen and print board
             clearScreen()
             printBoard()
         }
     }
-    println("Congratulations, you found the word!")
+    if (isSolved()) {
+        // when you win
+        println("Congratulations, you found the word!")
+    } else {
+        // when you lose
+        println("You lost! The word was: ${wantedWord}")
+    }
 }
