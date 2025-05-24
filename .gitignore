@@ -1,3 +1,4 @@
 docs/
-*.jar
 release/
+*.jar
+create_release_*

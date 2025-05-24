@@ -101,4 +101,6 @@ Show help:
 If no flag is provided, the script will just compile the game.
 
 ## Legal
-This project uses a word list licensed under the MIT License, originally publishe [here](https://github.com/wordnik/wordlist).
+This project uses two seperate word lists for English and German. You can find them here:  
+[English](https://www.ef.com/wwen/english-resources/english-vocabulary/top-3000-words/)  
+[German](https://www1.udel.edu/LLL/language/deutsch/top10000.pdf)
