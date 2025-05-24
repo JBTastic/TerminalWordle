@@ -26,7 +26,7 @@ if [ -f main.jar ]; then
   rm main.jar
 fi
 
-kotlinc src/*.kt -include-runtime -d main.jar
+kotlinc ./src/*.kt -include-runtime -d main.jar
 
 if [[ "$1" == "-e" || "$1" == "--execute" ]]; then
   java -jar main.jar

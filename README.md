@@ -93,3 +93,6 @@ Show help:
 ```
 
 If no flag is provided, the script will just compile the project.
+
+## Legal
+This project uses a word list licensed under the MIT License, originally publishe [here](https://github.com/wordnik/wordlist).
