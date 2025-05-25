@@ -1,10 +1,12 @@
 # Wordle in the terminal!
 
-WARNING! This game may not work in Windows right now because of file paths using "\\" in Windows instead of "/". You could either just change the paths in the code and then compile yourself or wait until I release a fix for Windows users.  
-  
 This is Wordle, but in the terminal, written in Kotlin!  
   
-This project only contains Kotlin source files that are compiled into an executable `.jar` file.
+The repository only contains Kotlin source files that you have to compile into an executable `.jar` file yourself.  
+
+If you only want to play, download the .zip file in the latest release, unpack it, open your terminal, cd into the folder and run `java -jar wordle.jar`.  If this doesn't work, scroll down for a tutorial on how to install the JDK.
+
+If you want to contribute to this project, you may want to install both the Kotlin terminal compiler and the JDK.
 
 ---
 
@@ -13,7 +15,7 @@ This project only contains Kotlin source files that are compiled into an executa
 To successfully compile and run the project, you need:
 
 - **Kotlin Compiler (`kotlinc`)**
-- **Java Runtime Environment (JRE)**
+- **Java Development Kit (JDK)**
 
 ---
 
@@ -53,9 +55,9 @@ kotlin -version
 
 ---
 
-### Java Runtime Environment (JRE)
+### Java Development Kit (JDK)
 
-The Java Runtime Environment is required to run the compiled `.jar` file.
+The Java Development Kit is required to run the compiled `.jar` file.
 
 **Installation:**
 
