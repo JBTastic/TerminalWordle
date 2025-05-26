@@ -2,7 +2,7 @@
 
 
 fun printBoard(language: Int?, wantedWord: String) {
-    println("The word were are looking for is in ${languages[language]}!")
+    println("The word we are looking for is in ${languages[language]}!")
     // println("Wanted word is $wantedWord")
     val horizontalLine = " "+"-".repeat(19)
 
